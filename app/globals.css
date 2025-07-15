@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 215 30% 25%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 215 30% 25%;
+    --radius: 0.5rem;
+    --gold: 36 60% 60%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-cormorant;
+  }
+  p,
+  a,
+  li,
+  span,
+  button,
+  input,
+  textarea {
+    @apply font-montserrat;
+  }
+}
+
+/* Custom styles with mobile-first approach */
+.section-padding {
+  @apply py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28;
+}
+
+.container-custom {
+  @apply container mx-auto px-4 sm:px-6 md:px-8;
+}
+
+/* Typography - Mobile First */
+.heading-xl {
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-cormorant font-light leading-tight tracking-tight;
+}
+
+.heading-lg {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-cormorant font-light leading-tight tracking-tight;
+}
+
+.heading-md {
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-cormorant font-light leading-tight tracking-tight;
+}
+
+.heading-sm {
+  @apply text-lg sm:text-xl md:text-2xl lg:text-3xl font-cormorant font-light leading-tight tracking-tight;
+}
+
+.subheading {
+  @apply text-sm sm:text-base md:text-lg lg:text-xl text-primary/90 font-montserrat font-light tracking-wide uppercase;
+}
+
+.text-body {
+  @apply text-sm sm:text-base md:text-lg text-gray-600 font-montserrat leading-relaxed;
+}
+
+.text-small {
+  @apply text-xs sm:text-sm text-gray-500 font-montserrat;
+}
+
+/* Enhanced Button styles */
+.btn {
+  @apply inline-flex items-center justify-center rounded-none text-xs sm:text-sm font-medium uppercase tracking-wider transition-all duration-300
+  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+  disabled:opacity-50 disabled:pointer-events-none ring-offset-background;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary/90 hover:shadow-lg transform hover:-translate-y-0.5 
+  h-10 sm:h-12 px-6 sm:px-8 py-2 border border-primary;
+}
+
+.btn-outline {
+  @apply border border-primary text-primary hover:bg-primary hover:text-white hover:shadow-lg transform hover:-translate-y-0.5
+  h-10 sm:h-12 px-6 sm:px-8 py-2;
+}
+
+.btn-gold {
+  @apply bg-gold text-white hover:bg-gold/90 hover:shadow-lg transform hover:-translate-y-0.5
+  h-10 sm:h-12 px-6 sm:px-8 py-2 border border-gold;
+}
+
+/* Enhanced Navigation */
+.nav-link {
+  @apply relative inline-block uppercase text-sm tracking-wider font-medium transition-all duration-300;
+}
+
+.nav-link::after {
+  content: "";
+  @apply absolute bottom-0 left-0 w-0 h-px bg-gold transition-all duration-300 ease-in-out;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.nav-link.active::after {
+  @apply w-full;
+}
+
+/* Mobile Menu Enhancements */
+@media (max-width: 1279px) {
+  .mobile-menu-item {
+    @apply transform transition-all duration-200 hover:translate-x-2;
+  }
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+  @apply fixed top-0 left-0 h-0.5 bg-gold z-50 transition-all duration-100 ease-out;
+  width: 0%;
+}
+
+/* Enhanced Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+}
+
+/* Certificate card enhancements */
+.certificate-card {
+  @apply relative overflow-hidden bg-white shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.certificate-card:hover .certificate-overlay {
+  @apply opacity-100;
+}
+
+.certificate-overlay {
+  @apply absolute inset-0 bg-primary/80 opacity-0 transition-all duration-300 flex items-center justify-center;
+}
+
+/* Enhanced Service card */
+.service-card {
+  @apply relative p-4 sm:p-6 md:p-8 border border-gray-100 transition-all duration-300 overflow-hidden hover:shadow-lg hover:-translate-y-1;
+}
+
+.service-card::before {
+  content: "";
+  @apply absolute bottom-0 left-0 w-0 h-1 bg-gold transition-all duration-300;
+}
+
+.service-card:hover::before {
+  @apply w-full;
+}
+
+/* Form enhancements */
+.form-input {
+  @apply border-0 border-b border-gray-300 rounded-none px-0 py-3 focus:ring-0 focus:border-primary transition-colors duration-200;
+}
+
+/* Decorative elements */
+.decorative-line {
+  @apply w-12 sm:w-16 md:w-20 h-px bg-gold my-4 sm:my-6;
+}
+
+.decorative-square {
+  @apply w-2 h-2 bg-gold absolute -left-1 top-0;
+}
+
+/* Hero section enhancements */
+.hero-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f0f0f0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Collaboration section */
+.collaboration-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Loader enhancements */
+.loader-container {
+  @apply fixed inset-0 flex items-center justify-center bg-white z-50;
+}
+
+.loader-content {
+  @apply text-center;
+}
+
+.loader-logo {
+  @apply mb-4 opacity-0 scale-95;
+  animation: fadeInScale 0.8s ease-out forwards;
+}
+
+.loader-bar {
+  @apply h-0.5 bg-primary/20 w-32 sm:w-48 mx-auto overflow-hidden relative;
+}
+
+.loader-progress {
+  @apply h-full bg-primary absolute left-0 top-0 w-0;
+  animation: loadingProgress 2s ease-in-out forwards;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes loadingProgress {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .container-custom {
+    @apply px-4;
+  }
+}
+
+@media (max-width: 1279px) {
+  .mobile-nav-active {
+    @apply overflow-hidden;
+  }
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
