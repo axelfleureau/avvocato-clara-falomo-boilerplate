@@ -46,7 +46,7 @@
     "embla-carousel-react": "latest",
     "firebase": "latest",
     "firebase-admin": "latest",
-    "framer-motion": "latest",
+    "framer-motion": "^12.23.6",
     "input-otp": "latest",
     "jose": "latest",
     "jsonwebtoken": "latest",

@@ -298,3 +298,44 @@ html {
     display: none !important;
   }
 }
+
+/* MOBILE OPTIMIZATIONS */
+@media (max-width: 1279px) {
+  .section-navigator {
+    display: none !important;
+  }
+
+  .mobile-menu-item {
+    @apply transform transition-all duration-200 hover:translate-x-2 active:translate-x-1;
+  }
+
+  .btn {
+    @apply min-h-[44px] min-w-[44px] active:scale-95;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: 100vh;
+    @apply py-20;
+  }
+
+  .service-card, .certificate-card {
+    @apply p-6 active:scale-[0.98];
+  }
+
+  .form-input {
+    @apply h-12 text-base;
+  }
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
