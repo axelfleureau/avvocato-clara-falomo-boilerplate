@@ -7,7 +7,6 @@ import AboutSection from "@/components/about-section"
 import CertificationsSection from "@/components/certifications-section"
 import ServicesSection from "@/components/services-section"
 import CollaborationSection from "@/components/collaboration-section"
-import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
 import ScrollProgressIndicator from "@/components/scroll-progress-indicator"
 import SectionNavigator from "@/components/section-navigator"
@@ -17,14 +16,12 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("hero")
 
   useEffect(() => {
-    // Simulate loading time
     const timer = setTimeout(() => {
       setLoading(false)
     }, 2500)
 
     const handleScroll = () => {
-      // Update active section based on scroll position
-      const sections = ["hero", "about", "services", "certifications", "collaboration", "contact"]
+      const sections = ["hero", "about", "services", "certifications", "collaboration"]
 
       for (const section of sections) {
         const element = document.getElementById(section)
@@ -58,7 +55,6 @@ export default function Home() {
       <ServicesSection />
       <CertificationsSection />
       <CollaborationSection />
-      <ContactSection />
       <Footer />
     </main>
   )
