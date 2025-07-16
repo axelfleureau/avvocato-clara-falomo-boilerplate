@@ -65,7 +65,7 @@ const CollaborationSection = () => {
           </motion.p>
           <motion.button
             variants={itemVariants}
-            onClick={scrollToContact}
+            onClick={() => window.open("https://wa.me/393498057326?text=Ciao%20Clara,%20vorrei%20parlare%20di%20una%20possibile%20collaborazione", "_blank", "noopener,noreferrer")}
             className="btn bg-transparent text-white border border-white hover:bg-white/10 inline-flex items-center"
           >
             Parliamo di una collaborazione
