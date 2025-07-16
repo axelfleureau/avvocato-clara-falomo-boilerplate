@@ -56,14 +56,14 @@ const SectionNavigator: React.FC<SectionNavigatorProps> = ({ activeSection }) =>
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
-          className="fixed bottom-8 left-0 right-0 z-40 flex justify-center"
+          className="fixed bottom-8 left-0 right-0 z-40 flex justify-center hidden xl:flex"
         >
-          <div className="bg-white shadow-lg rounded-full px-6 py-3 flex items-center">
+          <div className="bg-white/95 backdrop-blur-sm shadow-lg rounded-full px-6 py-3 flex items-center max-w-[calc(100vw-2rem)] overflow-x-auto">
             {sections.map((section) => (
               <button
                 key={section.id}
                 onClick={() => scrollToSection(section.id)}
-                className={`relative px-4 py-1 text-sm transition-colors ${
+                className={`relative px-4 py-1 text-sm transition-colors whitespace-nowrap ${
                   activeSection === section.id ? "text-primary" : "text-gray-500 hover:text-gray-700"
                 }`}
               >
@@ -71,7 +71,7 @@ const SectionNavigator: React.FC<SectionNavigatorProps> = ({ activeSection }) =>
                 {activeSection === section.id && (
                   <motion.div
                     layoutId="activeSection"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold"
+                    className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-gold rounded-full"
                     initial={false}
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   />
@@ -80,7 +80,7 @@ const SectionNavigator: React.FC<SectionNavigatorProps> = ({ activeSection }) =>
             ))}
             <button
               onClick={scrollToTop}
-              className="ml-2 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center"
+              className="ml-4 bg-primary hover:bg-primary/90 text-white w-8 h-8 rounded-full flex items-center justify-center transition-colors"
               aria-label="Torna in cima"
             >
               <ArrowUp size={16} />
