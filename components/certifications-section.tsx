@@ -42,20 +42,21 @@ const CertificationsSection = () => {
 
   const certifications = [
     {
-      title: "Master in Giurista Internazionale d'Impresa",
-      institution: "Università degli Studi di Padova",
-      date: "Settembre 2024",
-      description:
-        "Master universitario di secondo livello in diritto internazionale d'impresa, diretto dalla Professoressa Silvia Bertocco.",
-      image: "/images/certificates/master-giurista-internazionale.jpg",
-    },
-    {
       title: "Laurea in Giurisprudenza",
       institution: "Università degli Studi di Padova",
       date: "Marzo 2002",
       description: "Laurea in Giurisprudenza conseguita presso l'Università degli Studi di Padova.",
       image: "/images/certificates/laurea-giurisprudenza.jpg",
     },
+
+    {
+      title: "Laurea in Banca e Finanza",
+      institution: "Università degli Studi di Udine",
+      date: "Ottobre 2021",
+      description: "Laurea in Banca e Finanza conseguita presso l'Università degli Studi di Udine.",
+      image: "/images/certificates/laurea-banca-finanza.jpg",
+    },
+
     {
       title: "Esperto nella Composizione Negoziata della Crisi d'Impresa",
       institution: "Unione Triveneta dei Consigli dell'Ordine degli Avvocati",
@@ -64,13 +65,7 @@ const CertificationsSection = () => {
         "Corso di formazione di 55 ore per esperti nella composizione negoziata della crisi d'impresa secondo il DL 118/2021 convertito con L 147/2021.",
       image: "/images/certificates/attestato-crisi-impresa.jpg",
     },
-    {
-      title: "Laurea in Banca e Finanza",
-      institution: "Università degli Studi di Udine",
-      date: "Ottobre 2021",
-      description: "Laurea in Banca e Finanza conseguita presso l'Università degli Studi di Udine.",
-      image: "/images/certificates/laurea-banca-finanza.jpg",
-    },
+
     {
       title: "Corso Governance Società in House e Partecipate",
       institution: "Consiglio Nazionale Forense",
@@ -78,6 +73,16 @@ const CertificationsSection = () => {
       description: "Corso specialistico sulla governance delle società in house e delle partecipate pubbliche.",
       image: null,
     },
+
+    {
+      title: "Master in Giurista Internazionale d'Impresa",
+      institution: "Università degli Studi di Padova",
+      date: "Settembre 2024",
+      description:
+        "Master universitario di secondo livello in diritto internazionale d'impresa, diretto dalla Professoressa Silvia Bertocco.",
+      image: "/images/certificates/master-giurista-internazionale.jpg",
+    },
+    
     {
       title: "Certificazione Bloomberg Market Concepts",
       institution: "Bloomberg",

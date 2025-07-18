@@ -42,7 +42,7 @@ const CompetenciesSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Competenze Principali</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-gray-600 text-lg">
-            Offro servizi legali specializzati in diverse aree del diritto d&apos;impresa, con un approccio
+            Offro servizi legali specializzati in diverse aree del diritto civile, con un approccio
             personalizzato e orientato alle soluzioni.
           </p>
         </div>

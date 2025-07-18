@@ -10,9 +10,9 @@ const ServicesSection = () => {
 
   const services = [
     {
-      title: "Legale per imprese",
+      title: "Legale per privati",
       description:
-        "Supporto legale completo per aziende di ogni dimensione, dalla costituzione alla gestione ordinaria e straordinaria.",
+        "Assistenza legale chiara e puntuale in ambito civile: tutela della persona e della famiglia, successioni, responsabilità civile e contratti. Un supporto su misura per ogni esigenza personale.",
       icon: <Building2 className="h-8 w-8 text-gold" />,
     },
     {
@@ -98,7 +98,7 @@ const ServicesSection = () => {
           </motion.h2>
           <motion.div variants={itemVariants} className="decorative-line mx-auto" />
           <motion.p variants={itemVariants} className="text-body">
-            Offro servizi legali specializzati in diverse aree del diritto d&apos;impresa, con un approccio
+            Offro servizi legali specializzati in diverse aree del diritto civile, con un approccio
             personalizzato e orientato alle soluzioni.
           </motion.p>
         </motion.div>

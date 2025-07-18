@@ -79,7 +79,7 @@ const AboutSection = () => {
             Chi Sono
           </motion.span>
           <motion.h2 variants={itemVariants} className="heading-lg text-primary mt-3">
-            La Mia Storia Professionale
+            Storia Professionale
           </motion.h2>
           <motion.div variants={itemVariants} className="decorative-line mx-auto" />
         </motion.div>
@@ -116,14 +116,12 @@ const AboutSection = () => {
             className="order-1 lg:order-2"
           >
             <motion.p variants={itemVariants} className="text-body mb-6">
-              Sono Clara Falomo, avvocato specializzato in diritto civile, commerciale e finanziario. La mia formazione
-              accademica presso l'Università di Padova e l'esperienza maturata in oltre due decenni di professione mi
-              permettono di offrire consulenza legale di alta qualità.
+              La mia formazione accademica presso l'Università di Padova e Udine e l'esperienza maturata in oltre
+              due decenni di professione mi permettono di offrire consulenza legale di alta qualità.
             </motion.p>
 
             <motion.p variants={itemVariants} className="text-body mb-6">
-              Ho conseguito una doppia laurea in Giurisprudenza e Banca e Finanza, completando la mia formazione con un
-              Master in Giurista Internazionale d'Impresa. Questa preparazione multidisciplinare mi consente di
+              Questa preparazione multidisciplinare mi consente di
               affrontare le sfide legali moderne con competenza e innovazione.
             </motion.p>
 
@@ -136,7 +134,7 @@ const AboutSection = () => {
             <motion.div variants={itemVariants} className="space-y-4">
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-gold mr-4"></div>
-                <span className="text-gray-700 font-medium">Specializzazione in Diritto Civile e Commerciale</span>
+                <span className="text-gray-700 font-medium">Consulenza in Diritto Civile e Commerciale</span>
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-gold mr-4"></div>
