@@ -26,7 +26,7 @@ const AboutSection = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeOut", // use a valid string for ease
       },
     },
   }
@@ -38,7 +38,7 @@ const AboutSection = () => {
       x: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeOut", // use a valid string for ease
       },
     },
   }
@@ -116,8 +116,16 @@ const AboutSection = () => {
             className="order-1 lg:order-2"
           >
             <motion.p variants={itemVariants} className="text-body mb-6">
-              La mia formazione accademica presso l'Università di Padova e Udine e l'esperienza maturata in oltre
-              due decenni di professione mi permettono di offrire consulenza legale di alta qualità.
+              Diplomata al Liceo Scientifico "Michelangelo Grigoletti" di Pordenone, laureata in Giurisprudenza
+              all'Università di Padova con tesi intitolata:  "Nuova disciplina dei contratti di lavoro a termine",
+              relatore Prof. Giuseppe Suppiej; conseguo quindi l'abilitazione alla professione forense presso la
+              Corte d'Appello di Trieste. Laureata in Banca e Finanza all'Università di Udine con tesi dal titolo:
+              "Composizione negoziata della crisi di impresa", relatore Prof. Enrico Fioravante Geretto, ottengo
+              quindi presso l'Università di Padova un Master di II Livello in Giurista Internazionale di impresaù
+              con tesi sul "   Diritto di controllo del socio non amministratore di S.R.L.  ed esigenze di
+              riservatezza della società" relatore Prof. Vincenzo Antonini. La formazione accademica
+              multidisciplinare l'esperienza maturata in oltre due decenni di professione mi consentono di affrontare
+              le moderne sfide legali con competenza e innovazione per ottenere soluzioni efficaci e personalizzate.
             </motion.p>
 
             <motion.p variants={itemVariants} className="text-body mb-6">
@@ -134,7 +142,7 @@ const AboutSection = () => {
             <motion.div variants={itemVariants} className="space-y-4">
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-gold mr-4"></div>
-                <span className="text-gray-700 font-medium">Consulenza in Diritto Civile e Commerciale</span>
+                <span className="text-gray-700 font-medium">Opero prevalentemente nel settore del Diritto Civile e Commerciale </span>
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-gold mr-4"></div>

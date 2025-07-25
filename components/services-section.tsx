@@ -26,12 +26,12 @@ const ServicesSection = () => {
       description:
         "Consulenza su modelli di governance societaria, adeguamenti normativi e implementazione di sistemi di compliance aziendale.",
       icon: <FileCheck className="h-8 w-8 text-gold" />,
-    },
-    {
-      title: "Collaborazioni",
-      description: "Disponibilità per collaborazioni con altri studi legali o consulenza specialistica.",
-      icon: <Users className="h-8 w-8 text-gold" />,
-    },
+    },/*
+      { 
+        title: "Collaborazioni",
+        description: "Disponibilità per collaborazioni con altri studi legali o consulenza specialistica.",
+        icon: <Users className="h-8 w-8 text-gold" />,
+      },*/
     {
       title: "Diritto bancario",
       description:

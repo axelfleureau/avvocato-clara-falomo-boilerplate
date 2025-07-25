@@ -21,12 +21,14 @@ const CompetenciesSection = () => {
         "Consulenza su modelli di governance societaria, adeguamenti normativi e implementazione di sistemi di compliance aziendale.",
       icon: <FileCheck className="h-10 w-10 text-primary" />,
     },
-    {
-      title: "Collaborazioni interstudio",
-      description:
-        "Disponibilità per collaborazioni con altri studi legali in regime di subappalto o consulenza specialistica.",
-      icon: <Users className="h-10 w-10 text-primary" />,
-    },
+    /*
+        {
+          title: "Collaborazioni interstudio",
+          description:
+            "Disponibilità per collaborazioni con altri studi legali in regime di subappalto o consulenza specialistica.",
+          icon: <Users className="h-10 w-10 text-primary" />,
+        },
+    */
     {
       title: "Diritto bancario e societario",
       description:

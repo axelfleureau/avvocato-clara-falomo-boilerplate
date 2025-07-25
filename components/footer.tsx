@@ -39,9 +39,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <motion.div variants={itemVariants}>
             <h3 className="text-xl font-cormorant font-light mb-4">Avv. Clara Falomo</h3>
-            <p className="text-gray-400 mb-4">
-              Avvocato Civilista specializzato in Consulenza legale per privati ed imprese.
-            </p>
+
           </motion.div>
 
           <motion.div variants={itemVariants} className="flex flex-col">

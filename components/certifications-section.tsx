@@ -93,7 +93,7 @@ const CertificationsSection = () => {
     {
       title: "First Certificate",
       institution: "University of Cambridge",
-      date: "2000",
+      date: "1987",
       description: "Certificazione di lingua inglese di livello B2 del Quadro Comune Europeo.",
       image: null,
     },
@@ -104,6 +104,27 @@ const CertificationsSection = () => {
       description: "Certificazione avanzata di lingua inglese.",
       image: null,
     },
+    {
+      title: "Corso Governance Società Partecipate",
+      institution: "Consiglio Nazionale Forense",
+      date: "2021-2022",
+      description: "Corso di alta formazione per la preparazione alle cariche di governance nelle società in house e partecipate dagli enti pubblici. Durata: 43 ore con verifica finale. Riconosciuti 20 crediti formativi.",
+      image: "/images/certificates/corso-governance-società-partecipate.jpg",
+    },
+    {
+      title: "Inglese Giuridico ed Elementi di Diritto Anglosassone",
+      institution: "IRSE - Istituto Regionale di Studi Europei FVG",
+      date: "2016",
+      description: "Corso di inglese giuridico organizzato in collaborazione con l'Ordine degli Avvocati di Pordenone. Frequenza completa: 18 ore su 18 disponibili.",
+      image: "/images/certificates/inglese-giuridico-ed-elementi-di-diritto-angolosassone.jpg",
+    },
+    {
+      title: "Legal Movies and Law - Inglese Giuridico",
+      institution: "Associazione Culturale per lo Studio del Diritto",
+      date: "2002",
+      description: "Corso di Inglese Giuridico ed Elementi del Diritto Anglosassone, prima edizione. Organizzato in collaborazione con l'Ordine degli Avvocati di Pordenone e finanziato dal Fondo Sociale Europeo.",
+      image: "/images/certificates/legal-movies-and-law-inglese-giuridico.jpg",
+    }
   ]
 
   const containerVariants = {

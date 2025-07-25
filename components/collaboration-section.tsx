@@ -1,3 +1,4 @@
+/*
 "use client"
 
 import { useRef } from "react"
@@ -78,3 +79,4 @@ const CollaborationSection = () => {
 }
 
 export default CollaborationSection
+*/

@@ -6,7 +6,7 @@ import HeroSection from "@/components/hero-section"
 import AboutSection from "@/components/about-section"
 import CertificationsSection from "@/components/certifications-section"
 import ServicesSection from "@/components/services-section"
-import CollaborationSection from "@/components/collaboration-section"
+/*import CollaborationSection from "@/components/collaboration-section"*/
 import Footer from "@/components/footer"
 import ScrollProgressIndicator from "@/components/scroll-progress-indicator"
 import SectionNavigator from "@/components/section-navigator"
@@ -82,7 +82,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <CertificationsSection />
-      <CollaborationSection />
+
       <Footer />
     </main>
   )
