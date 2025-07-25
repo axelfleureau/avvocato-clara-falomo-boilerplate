@@ -33,9 +33,9 @@ const Footer = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
-      className="bg-gray-900 text-white py-12"
+      className="bg-gray-900 text-white py-20 lg:py-28"
     >
-      <div className="container-custom">
+      <div className="container-custom max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <motion.div variants={itemVariants}>
             <h3 className="text-xl font-cormorant font-light mb-4">Avv. Clara Falomo</h3>
@@ -117,19 +117,7 @@ const Footer = () => {
                   Certificazioni
                 </a>
               </li>
-              <li>
-                <a
-                  href="#collaboration"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    const section = document.getElementById("collaboration")
-                    if (section) section.scrollIntoView({ behavior: "smooth" })
-                  }}
-                  className="text-gray-400 hover:text-white"
-                >
-                  Collaborazioni
-                </a>
-              </li>
+              
               <li>
                 <a
                   href="#contact"

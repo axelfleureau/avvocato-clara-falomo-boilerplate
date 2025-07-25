@@ -144,11 +144,11 @@ const CertificationsSection = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: [0.42, 0, 0.58, 1], // cubic-bezier for easeOut
       },
     },
   }
-
+  
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
@@ -157,11 +157,11 @@ const CertificationsSection = () => {
       transition: {
         delay: 0.05 * i,
         duration: 0.5,
-        ease: "easeOut",
+        ease: [0.42, 0, 0.58, 1], // cubic-bezier for easeOut
       },
     }),
   }
-
+  
   const modalVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
@@ -169,7 +169,7 @@ const CertificationsSection = () => {
       scale: 1,
       transition: {
         duration: 0.3,
-        ease: "easeOut",
+        ease: [0.42, 0, 0.58, 1], // cubic-bezier for easeOut
       },
     },
     exit: {
@@ -177,7 +177,7 @@ const CertificationsSection = () => {
       scale: 0.9,
       transition: {
         duration: 0.2,
-        ease: "easeIn",
+        ease: [0.42, 0, 1, 1], // cubic-bezier for easeIn
       },
     },
   }

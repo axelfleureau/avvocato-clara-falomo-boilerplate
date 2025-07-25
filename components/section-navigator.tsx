@@ -31,7 +31,6 @@ const SectionNavigator: React.FC<SectionNavigatorProps> = ({ activeSection }) =>
     { id: "about", label: "Chi Sono" },
     { id: "services", label: "Servizi" },
     { id: "certifications", label: "Certificazioni" },
-    { id: "collaboration", label: "Collaborazioni" },
     { id: "contact", label: "Contatti" },
   ]
 

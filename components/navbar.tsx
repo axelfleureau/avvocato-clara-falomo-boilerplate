@@ -30,7 +30,6 @@ const Navbar = () => {
     { name: "Competenze", href: "#competencies" },
     { name: "Certificazioni", href: "#certifications" },
     { name: "Formazione", href: "#academic" },
-    { name: "Collaborazioni", href: "#collaboration" },
     { name: "Contatti", href: "#contact" },
   ]
 
