@@ -21,19 +21,47 @@ export default function Home() {
     }, 2500)
 
     const handleScroll = () => {
-      const sections = ["hero", "about", "services", "certifications", "collaboration"]
+      const sections = [
+        { id: "hero", element: document.getElementById("hero") },
+        { id: "about", element: document.getElementById("about") },
+        { id: "services", element: document.getElementById("services") },
+        { id: "certifications", element: document.getElementById("certifications") },
+        { id: "collaboration", element: document.getElementById("collaboration") },
+        { id: "contact", element: document.getElementById("contact") },
+      ]
 
-      for (const section of sections) {
-        const element = document.getElementById(section)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            setActiveSection(section)
+      const scrollPosition = window.scrollY
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+
+      // Se siamo molto vicini al fondo, imposta "contact"
+      if (scrollPosition + windowHeight >= documentHeight - 100) {
+        setActiveSection("contact")
+        return
+      }
+
+      // Controlla ogni sezione
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i]
+        if (section.element) {
+          const rect = section.element.getBoundingClientRect()
+          const sectionTop = scrollPosition + rect.top
+          const sectionHeight = rect.height
+          const sectionMiddle = sectionTop + sectionHeight / 2
+
+          // Se il centro della viewport è oltre il centro della sezione
+          const viewportCenter = scrollPosition + windowHeight / 2
+
+          if (viewportCenter >= sectionMiddle - 100) {
+            setActiveSection(section.id)
             break
           }
         }
       }
     }
+
+    // Chiamata iniziale per impostare la sezione attiva
+    handleScroll()
 
     window.addEventListener("scroll", handleScroll)
     return () => {
