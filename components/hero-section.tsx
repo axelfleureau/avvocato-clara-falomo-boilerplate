@@ -102,15 +102,7 @@ const HeroSection = () => {
             </motion.button>
 
             {/* Mobile scroll indicator */}
-            <motion.button
-              onClick={scrollToAbout}
-              className="lg:hidden mt-8 mx-auto text-primary hover:text-gold transition-colors flex justify-center"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-              aria-label="Scorri verso il basso"
-            >
-              <ChevronDown size={32} />
-            </motion.button>
+            
           </motion.div>
 
           {/* Image */}
@@ -133,23 +125,13 @@ const HeroSection = () => {
                 </div>
 
               {/* Decorative elements */}
-              <div className="absolute -top-4 -left-4 w-20 h-20 border-2 border-gold opacity-30"></div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gold opacity-20"></div>
+              
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.button
-        onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-primary hover:text-gold transition-colors"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-        aria-label="Scorri verso il basso"
-      >
-        <ChevronDown size={32} />
-      </motion.button>
+
     </section>
   )
 }
