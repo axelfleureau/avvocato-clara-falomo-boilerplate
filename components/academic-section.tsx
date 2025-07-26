@@ -28,12 +28,6 @@ const AcademicSection = () => {
       icon: <Award className="h-6 w-6 text-primary" />,
     },
     {
-      title: "Corso Governance Società in House e Partecipate",
-      institution: "Consiglio Nazionale Forense",
-      year: "2023",
-      icon: <BookOpen className="h-6 w-6 text-primary" />,
-    },
-    {
       title: "Certificazione Bloomberg Market Concepts",
       institution: "Bloomberg",
       year: "2020",

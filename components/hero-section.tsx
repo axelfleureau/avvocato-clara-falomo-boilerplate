@@ -84,9 +84,7 @@ const HeroSection = () => {
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Button asChild className="btn btn-primary">
-                <a href="#contact">Richiedi Consulenza</a>
-              </Button>
+
               <Button asChild variant="outline" className="btn btn-outline bg-transparent">
                 <a href="#about">Scopri di più</a>
               </Button>

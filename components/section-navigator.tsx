@@ -35,9 +35,23 @@ const SectionNavigator: React.FC<SectionNavigatorProps> = ({ activeSection }) =>
   ]
 
   const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
+    if (sectionId === "contact") {
+      // Per la sezione contatti, scorri alla fine della pagina
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth",
+      })
+    } else if (sectionId === "hero") {
+      // Per la sezione home/hero, scorri all'inizio della pagina
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      })
+    } else {
+      const section = document.getElementById(sectionId)
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" })
+      }
     }
   }
 

@@ -39,7 +39,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <motion.div variants={itemVariants}>
             <h3 className="text-xl font-cormorant font-light mb-4">Avv. Clara Falomo</h3>
-
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Iscritta all'Ordine degli Avvocati di Pordenone
+            </p>
+            <p className="text-gray-400 text-sm mt-2">
+              P.IVA IT01537350934
+            </p>
           </motion.div>
 
           <motion.div variants={itemVariants} className="flex flex-col">
@@ -59,6 +64,12 @@ const Footer = () => {
                 <Mail className="h-4 w-4 mr-2 text-gold" />
                 <a href="mailto:info@avvocatoclarafalomo.it" className="text-gray-400 hover:text-white">
                   info@avvocatoclarafalomo.it
+                </a>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2 text-gold" />
+                <a href="mailto:pec.clara.falomo@avvocatipordenone.it" className="text-gray-400 hover:text-white">
+                  pec.clara.falomo@avvocatipordenone.it
                 </a>
               </div>
               <div className="flex items-center">
@@ -140,7 +151,7 @@ const Footer = () => {
           className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <div className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Avv. Clara Falomo. Tutti i diritti riservati. P.IVA (da inserire)
+            &copy; {new Date().getFullYear()} Avv. Clara Falomo. Tutti i diritti riservati.
           </div>
           <div className="flex space-x-6">
             <Link href="/privacy-policy" className="text-gray-500 hover:text-white text-sm transition-colors">

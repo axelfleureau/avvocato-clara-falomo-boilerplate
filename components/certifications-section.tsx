@@ -67,14 +67,6 @@ const CertificationsSection = () => {
     },
 
     {
-      title: "Corso Governance Società in House e Partecipate",
-      institution: "Consiglio Nazionale Forense",
-      date: "2023",
-      description: "Corso specialistico sulla governance delle società in house e delle partecipate pubbliche.",
-      image: null,
-    },
-
-    {
       title: "Master in Giurista Internazionale d'Impresa",
       institution: "Università degli Studi di Padova",
       date: "Settembre 2024",

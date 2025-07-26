@@ -3,24 +3,25 @@
 import { useRef } from "react"
 import { motion, useInView, easeOut } from "framer-motion"
 import { Building2, Landmark, LifeBuoy, FileCheck, Users, BookOpen } from "lucide-react"
+import Image from "next/image"
 
 const ServicesSection = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   const services = [
-      {
+    {
       title: "Recupero crediti",
       description:
         "Esperienza consolidata nella gestione stragiudiziale e giudiziale di recupero crediti.",
-        icon: <Users className="h-8 w-8 text-gold" />,
-      },
-      { 
-        title: "Diritto immobiliare",
-        description: "Assistenza nelle questioni correlate alla proprietà immobiliare (locazioni e diritti reali quali proprietà, possesso, servitù e annessi).",
-        icon: <Building2 className="h-8 w-8 text-gold" />,
-      },
-      {
+      icon: <Users className="h-8 w-8 text-gold" />,
+    },
+    { 
+      title: "Diritto immobiliare",
+      description: "Assistenza nelle questioni correlate alla proprietà immobiliare (locazioni e diritti reali quali proprietà, possesso, servitù e annessi).",
+      icon: <Building2 className="h-8 w-8 text-gold" />,
+    },
+    {
       title: "Diritto di famiglia e successioni",
       description:
         "Assistenza e consulenza in ambito familiare, favorendo, ove possibile, la composizione amichevole",
@@ -44,7 +45,6 @@ const ServicesSection = () => {
         "Assistenza in operazioni bancarie, contrattualistica specializzata.",
       icon: <Landmark className="h-8 w-8 text-gold" />,
     }
-    
   ]
 
   const containerVariants = {
@@ -71,7 +71,7 @@ const ServicesSection = () => {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: (i: number) => ({
+    visible: (i) => ({
       opacity: 1,
       y: 0,
       transition: {
@@ -80,6 +80,15 @@ const ServicesSection = () => {
         ease: easeOut,
       },
     }),
+  }
+
+  const imageVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: easeOut },
+    },
   }
 
   return (
@@ -97,31 +106,62 @@ const ServicesSection = () => {
           <motion.h2 variants={itemVariants} className="heading-lg text-primary mt-3">
             Aree di attività
           </motion.h2>
+          <motion.div variants={itemVariants} className="decorative-line mx-auto" />
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              custom={index}
-              variants={cardVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              className="service-card bg-white"
-            >
-              <div className="flex flex-col">
-                <div className="mb-6">{service.icon}</div>
-                <h3 className="heading-sm mb-4 text-primary">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-16 max-w-6xl mx-auto w-full">
+          {/* Left Block - Services Grid */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            className="order-1 lg:order-1 w-full"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  custom={index}
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate={isInView ? "visible" : "hidden"}
+                  className="service-card bg-white p-4"
+                >
+                  <div className="flex flex-col">
+                    <div className="flex items-center mb-2">
+                      <div className="mr-4 flex-shrink-0">{service.icon}</div>
+                      <h3 className="text-xl font-semibold text-primary leading-none tracking-tight">{service.title}</h3>
+                    </div>
+                    <div className="w-12 h-0.5 bg-gold mb-2 ml-12"></div>
+                    <p className="text-gray-600 text-sm leading-relaxed ml-12">{service.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Right Block - Image */}
+          <motion.div
+            variants={imageVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            className="order-2 lg:order-2 flex flex-col items-center w-full"
+          >
+            <div className="relative w-full max-w-[400px]">
+              <div className="aspect-[4/5] relative overflow-hidden shadow-xl rounded-lg w-full">
+                <Image
+                  src="/images/about-clara.jpg"
+                  alt="Clara Falomo - Avvocato"
+                  fill
+                  className="object-cover object-top rounded-lg"
+                  sizes="(max-width: 768px) 90vw, 400px"
+                  priority
+                />
               </div>
-            </motion.div>
-          ))}
-        </motion.div>
+              <div className="absolute inset-0 border-4 border-white shadow-lg -z-10 translate-x-3 translate-y-3 rounded-lg" />
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   )
