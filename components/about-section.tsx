@@ -1,8 +1,8 @@
 "use client"
 
 import { useRef } from "react"
-import { motion, useInView, easeOut } from "framer-motion"
-import { Scale, Users, Award, Clock } from "lucide-react"
+import { motion, useInView } from "framer-motion"
+import { Scale, Users, Award } from "lucide-react"
 import Image from "next/image"
 
 const AboutSection = () => {
@@ -22,7 +22,7 @@ const AboutSection = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: easeOut },
+      transition: { duration: 0.8, ease: ["easeOut"] },
     },
   }
 
@@ -31,7 +31,7 @@ const AboutSection = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.8, ease: easeOut },
+      transition: { duration: 0.8, ease: ["easeOut"] },
     },
   }
 
@@ -59,21 +59,21 @@ const AboutSection = () => {
           <motion.div variants={itemVariants} className="decorative-line mx-auto" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-16 max-w-6xl mx-auto w-full">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-16">
           <motion.div
             variants={imageVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="order-2 lg:order-1 flex flex-col items-center w-full"
+            className="order-2 lg:order-1"
           >
-            <div className="relative w-full max-w-[400px]">
-              <div className="aspect-[4/5] relative overflow-hidden shadow-xl rounded-lg w-full">
+            <div className="relative">
+              <div className="aspect-[4/5] relative overflow-hidden shadow-xl rounded-lg">
                 <Image
                   src="/images/working-clara.jpg"
                   alt="Clara Falomo nel suo studio"
                   fill
                   className="object-cover object-top rounded-lg"
-                  sizes="(max-width: 768px) 90vw, 400px"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
               </div>
@@ -85,7 +85,7 @@ const AboutSection = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="order-1 lg:order-2 w-full"
+            className="order-1 lg:order-2"
           >
             <motion.p variants={itemVariants} className="text-body mb-6 text-lg lg:text-xl leading-relaxed">
               Diplomata al Liceo Scientifico "Michelangelo Grigoletti" di Pordenone, laureata in Giurisprudenza

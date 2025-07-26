@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef } from "react"
-import { motion, useInView, easeOut } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import { Building2, Landmark, LifeBuoy, FileCheck, Users, BookOpen } from "lucide-react"
 import Image from "next/image"
 
@@ -64,7 +64,7 @@ const ServicesSection = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: easeOut,
+        ease: "easeOut",
       },
     },
   }
@@ -77,7 +77,7 @@ const ServicesSection = () => {
       transition: {
         delay: 0.1 * i,
         duration: 0.5,
-        ease: easeOut,
+        ease: "easeOut",
       },
     }),
   }
@@ -87,7 +87,7 @@ const ServicesSection = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.8, ease: easeOut },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   }
 
@@ -109,13 +109,12 @@ const ServicesSection = () => {
           <motion.div variants={itemVariants} className="decorative-line mx-auto" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-16 max-w-6xl mx-auto w-full">
-          {/* Left Block - Services Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-16">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="order-1 lg:order-1 w-full"
+            className="order-1 lg:order-1"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {services.map((service, index) => (
@@ -140,21 +139,20 @@ const ServicesSection = () => {
             </div>
           </motion.div>
 
-          {/* Right Block - Image */}
           <motion.div
             variants={imageVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="order-2 lg:order-2 flex flex-col items-center w-full"
+            className="order-2 lg:order-2"
           >
-            <div className="relative w-full max-w-[400px]">
-              <div className="aspect-[4/5] relative overflow-hidden shadow-xl rounded-lg w-full">
+            <div className="relative">
+              <div className="aspect-[4/5] relative overflow-hidden shadow-xl rounded-lg">
                 <Image
                   src="/images/about-clara.jpg"
                   alt="Clara Falomo - Avvocato"
                   fill
                   className="object-cover object-top rounded-lg"
-                  sizes="(max-width: 768px) 90vw, 400px"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
               </div>
