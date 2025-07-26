@@ -67,7 +67,7 @@ const AboutSection = () => {
             className="order-2 lg:order-1"
           >
             <div className="relative">
-              <div className="aspect-[4/5] relative overflow-hidden shadow-xl rounded-lg">
+              <div className="aspect-[4/5] relative overflow-hidden shadow-xl rounded-lg max-w-md mx-auto">
                 <Image
                   src="/images/working-clara.jpg"
                   alt="Clara Falomo nel suo studio"

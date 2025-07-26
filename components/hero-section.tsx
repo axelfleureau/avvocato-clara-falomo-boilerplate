@@ -121,16 +121,16 @@ const HeroSection = () => {
             className="order-1 lg:order-2"
           >
             <div className="relative">
-              <div className="aspect-[4/5] relative overflow-hidden shadow-2xl">
+                <div className="aspect-[4/5] relative overflow-hidden shadow-2xl rounded-xl max-w-lg mx-auto">
                 <Image
                   src="/images/hero-clara.jpg"
                   alt="Avvocato Clara Falomo"
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-xl"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
-              </div>
+                </div>
 
               {/* Decorative elements */}
               <div className="absolute -top-4 -left-4 w-20 h-20 border-2 border-gold opacity-30"></div>
@@ -143,7 +143,7 @@ const HeroSection = () => {
       {/* Scroll indicator */}
       <motion.button
         onClick={scrollToAbout}
-        className="hidden lg:block absolute bottom-8 left-1/2 transform -translate-x-1/2 text-primary hover:text-gold transition-colors"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-primary hover:text-gold transition-colors"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
         aria-label="Scorri verso il basso"

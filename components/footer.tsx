@@ -57,7 +57,7 @@ const Footer = () => {
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-gold" />
                 <a href="tel:+393498057326" className="text-gray-400 hover:text-white">
-                  +39 349 805 7326
+                  +39 349 805 7326 / 0434 29630
                 </a>
               </div>
               <div className="flex items-center">
@@ -69,7 +69,7 @@ const Footer = () => {
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-gold" />
                 <a href="mailto:pec.clara.falomo@avvocatipordenone.it" className="text-gray-400 hover:text-white">
-                  pec.clara.falomo@avvocatipordenone.it
+                  pec: clara.falomo@avvocatipordenone.it
                 </a>
               </div>
               <div className="flex items-center">

@@ -146,7 +146,7 @@ const ServicesSection = () => {
             className="order-2 lg:order-2"
           >
             <div className="relative">
-              <div className="aspect-[4/5] relative overflow-hidden shadow-xl rounded-lg">
+                <div className="aspect-[4/5] relative overflow-hidden shadow-xl rounded-lg max-w-md mx-auto">
                 <Image
                   src="/images/about-clara.jpg"
                   alt="Clara Falomo - Avvocato"
@@ -155,7 +155,7 @@ const ServicesSection = () => {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
-              </div>
+                </div>
               <div className="absolute inset-0 border-4 border-white shadow-lg -z-10 translate-x-3 translate-y-3 rounded-lg" />
             </div>
           </motion.div>
