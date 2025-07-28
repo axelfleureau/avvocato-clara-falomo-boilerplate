@@ -128,15 +128,15 @@ const AboutSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-2 lg:grid-cols-3 gap-8"
+          className="flex justify-center items-center gap-4 sm:gap-8 lg:gap-12"
         >
           {stats.map((stat, index) => (
-            <motion.div key={index} variants={itemVariants} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-white rounded-full mb-4">
-                <stat.icon size={24} />
+            <motion.div key={index} variants={itemVariants} className="text-center flex-1 max-w-xs">
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-primary text-white rounded-full mb-3 sm:mb-4 mx-auto">
+                <stat.icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
               </div>
-              <div className="heading-sm text-primary mb-2">{stat.number}</div>
-              <p className="text-sm text-gray-600 font-medium">{stat.label}</p>
+              <div className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-cormorant font-light text-primary mb-1 sm:mb-2">{stat.number}</div>
+              <p className="text-xs sm:text-sm lg:text-base text-gray-600 font-medium leading-tight">{stat.label}</p>
             </motion.div>
           ))}
         </motion.div>

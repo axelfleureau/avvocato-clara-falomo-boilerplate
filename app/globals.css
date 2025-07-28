@@ -76,6 +76,8 @@
   }
 }
 
+
+
 /* Custom styles with mobile-first approach */
 .section-padding {
   @apply py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28;
@@ -339,3 +341,5 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
+
+

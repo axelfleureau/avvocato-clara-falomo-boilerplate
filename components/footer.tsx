@@ -151,6 +151,9 @@ const Footer = () => {
           className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <div className="text-gray-500 text-sm mb-4 md:mb-0">
+            Piazza XX Settembre n.8, Pordenone.
+          </div>
+          <div className="text-gray-500 text-sm mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Avv. Clara Falomo. Tutti i diritti riservati.
           </div>
           <div className="flex space-x-6">

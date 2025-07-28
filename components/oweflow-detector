@@ -1,0 +1,53 @@
+// COPIA E INCOLLA QUESTO NELLA CONSOLE DEL TUO SITO
+(function() {
+    const script = document.createElement('script');
+    script.innerHTML = `
+        function findOverflowElements() {
+            document.querySelectorAll('.overflow-highlight').forEach(el => {
+                el.classList.remove('overflow-highlight');
+            });
+
+            const viewportWidth = window.innerWidth;
+            const documentWidth = document.documentElement.scrollWidth;
+            
+            console.clear();
+            console.log('🔍 OVERFLOW DETECTIVE');
+            console.log('Viewport:', viewportWidth + 'px');
+            console.log('Document:', documentWidth + 'px');
+            console.log('Has overflow:', documentWidth > viewportWidth);
+            
+            if (documentWidth <= viewportWidth) {
+                console.log('✅ No overflow detected!');
+                return;
+            }
+
+            const problematic = [];
+            document.querySelectorAll('*').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const style = window.getComputedStyle(el);
+                
+                if (rect.right > viewportWidth || rect.left < 0) {
+                    el.style.outline = '2px solid red';
+                    problematic.push({
+                        element: el,
+                        tag: el.tagName,
+                        id: el.id,
+                        classes: el.className,
+                        width: rect.width,
+                        right: rect.right,
+                        overflow: rect.right - viewportWidth
+                    });
+                }
+            });
+            
+            problematic.sort((a,b) => b.overflow - a.overflow);
+            console.table(problematic.slice(0, 10));
+            
+            if (problematic.length > 0) {
+                console.log('🚨 Top offender:', problematic[0].element);
+            }
+        }
+        findOverflowElements();
+    `;
+    document.head.appendChild(script);
+})();
