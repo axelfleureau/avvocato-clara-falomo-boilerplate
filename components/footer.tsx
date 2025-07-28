@@ -63,7 +63,7 @@ const Footer = () => {
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-gold" />
                 <a href="mailto:info@avvocatoclarafalomo.it" className="text-gray-400 hover:text-white">
-                  info@avvocatoclarafalomo.it
+                  avvocato@clarafalomo.it
                 </a>
               </div>
               <div className="flex items-center">

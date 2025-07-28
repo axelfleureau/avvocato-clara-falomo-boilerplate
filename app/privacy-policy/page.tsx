@@ -21,11 +21,11 @@ export default function PrivacyPolicyPage() {
             <p>
               Avv. Clara Falomo
               <br />
-              Indirizzo: [Inserire Indirizzo Completo]
+              Indirizzo: Piazza XX Settembre n.8, Pordenone
               <br />
-              Email: info@avvocatoclarafalomo.it
+              Email: avvocato@clarafalomo.it
               <br />
-              Telefono: +39 349 805 7326
+              Telefono: +39 349 805 7326 / 0434 29630
             </p>
 
             <h2 className="heading-md text-primary mt-8 mb-4">Dati Personali Raccolti</h2>

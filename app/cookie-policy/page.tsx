@@ -114,7 +114,7 @@ export default function CookiePolicyPage() {
               recente.
             </p>
 
-            <p className="mt-8">Ultimo aggiornamento: 5 giugno 2025</p>
+            <p className="mt-8">Ultimo aggiornamento: 28 luglio 2025</p>
           </div>
         </div>
       </main>
