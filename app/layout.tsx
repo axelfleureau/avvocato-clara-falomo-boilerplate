@@ -1,6 +1,5 @@
 import type React from "react"
 import type { Metadata } from "next"
-import Script from "next/script"
 import { Cormorant_Garamond, Montserrat } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -46,13 +45,16 @@ export default function RootLayout({
   return (
     <html lang="it" suppressHydrationWarning>
       <head>
+        {/*
+          iubenda Privacy Controls and Cookie Solution.
+          Tag <script> nativo e non next/script: con strategy="beforeInteractive" Next
+          rimanda il caricamento al proprio bootstrap (__next_s), mentre qui il widget
+          e' il primo script della pagina. Serve perche' la configurazione ha
+          googleConsentModeV2 attivo: i default del consenso devono essere impostati
+          prima che qualsiasi altro tracker possa partire.
+        */}
+        <script src="https://embeds.iubenda.com/widgets/135d90d2-23eb-4079-9142-30e002203277.js" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        {/* iubenda Privacy Controls and Cookie Solution: deve caricarsi prima di qualsiasi altro tracker */}
-        <Script
-          id="iubenda-cs"
-          src="https://embeds.iubenda.com/widgets/135d90d2-23eb-4079-9142-30e002203277.js"
-          strategy="beforeInteractive"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
