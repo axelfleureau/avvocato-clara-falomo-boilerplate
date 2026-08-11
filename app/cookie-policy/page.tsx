@@ -42,7 +42,8 @@ export default function CookiePolicyPage() {
   return (
     <>
       <Navbar />
-      <main className="section-padding bg-white text-gray-800 pt-24 md:pt-32">
+      {/* Vedi la nota in app/privacy-policy/page.tsx: .section-padding sovrascriverebbe pt-24. */}
+      <main className="bg-white text-gray-800 pt-28 pb-16 md:pt-36 md:pb-24">
         <div className="container-custom">
           <div className="mx-auto max-w-4xl">
             <LegalPageHeader
