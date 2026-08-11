@@ -4,6 +4,12 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { Linkedin, Mail, Phone, MapPin } from "lucide-react"
 
+// Riapre il pannello di consenso di iubenda (Privacy Controls and Cookie Solution).
+const openCookiePreferences = () => {
+  const iub = (window as unknown as { _iub?: { cs?: { api?: { openPreferences?: () => void } } } })._iub
+  iub?.cs?.api?.openPreferences?.()
+}
+
 const Footer = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -163,6 +169,13 @@ const Footer = () => {
             <Link href="/cookie-policy" className="text-gray-500 hover:text-white text-sm transition-colors">
               Cookie Policy
             </Link>
+            <button
+              type="button"
+              onClick={openCookiePreferences}
+              className="text-gray-500 hover:text-white text-sm transition-colors"
+            >
+              Preferenze cookie
+            </button>
           </div>
         </motion.div>
       </div>
