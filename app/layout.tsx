@@ -18,6 +18,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.clarafalomo.it"),
   title: "Avv. Clara Falomo | Giurista internazionale d'impresa",
   description:
     "Avvocato Clara Falomo, esperta in diritto societario, bancario e composizione negoziata della crisi d'impresa. Consulenza legale professionale e collaborazioni interstudio.",
@@ -62,16 +63,18 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Attorney",
               name: "Clara Falomo",
-              image: "/images/clara-falomo.png",
+              image: "https://www.clarafalomo.it/images/hero-clara.jpg",
               description:
                 "Avvocato specializzato in diritto societario, bancario e composizione negoziata della crisi d'impresa",
-              url: "https://www.avvocatoclarafalomo.it",
-              telephone: "+39 XXXXXXXXXX",
-              email: "info@avvocatoclarafalomo.it",
+              url: "https://www.clarafalomo.it",
+              telephone: "+39 349 805 7326",
+              email: "avvocato@clarafalomo.it",
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Udine",
-                addressRegion: "UD",
+                streetAddress: "Piazza XX Settembre 8",
+                postalCode: "33170",
+                addressLocality: "Pordenone",
+                addressRegion: "PN",
                 addressCountry: "IT",
               },
               knowsLanguage: ["it", "en"],
