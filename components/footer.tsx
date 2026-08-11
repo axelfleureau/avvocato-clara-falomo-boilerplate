@@ -68,13 +68,13 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-gold" />
-                <a href="mailto:info@avvocatoclarafalomo.it" className="text-gray-400 hover:text-white">
+                <a href="mailto:avvocato@clarafalomo.it" className="text-gray-400 hover:text-white">
                   avvocato@clarafalomo.it
                 </a>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-gold" />
-                <a href="mailto:pec.clara.falomo@avvocatipordenone.it" className="text-gray-400 hover:text-white">
+                <a href="mailto:clara.falomo@avvocatipordenone.it" className="text-gray-400 hover:text-white">
                   pec: clara.falomo@avvocatipordenone.it
                 </a>
               </div>
