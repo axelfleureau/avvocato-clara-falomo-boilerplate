@@ -83,6 +83,16 @@
   @apply py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28;
 }
 
+/*
+  Pagine legali (privacy e cookie policy): non usano .section-padding perche'
+  il suo py-12 lascia il titolo sotto la navbar fissa, alta 80px.
+  Queste regole stanno dopo @tailwind utilities, quindi vincono su un pt-*
+  messo nel className: la spaziatura va definita qui, non nel componente.
+*/
+.legal-page-padding {
+  @apply pt-28 pb-16 md:pt-36 md:pb-24;
+}
+
 .container-custom {
   @apply container mx-auto px-4 sm:px-6 md:px-8;
 }

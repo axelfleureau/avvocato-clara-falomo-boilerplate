@@ -38,12 +38,8 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Navbar />
-      {/*
-        Niente .section-padding qui: la regola e' dichiarata dopo @tailwind utilities
-        in globals.css, quindi il suo py-12 vince su pt-24 e il titolo finiva sotto
-        la navbar fissa (80px) su mobile. Spaziatura verticale esplicita.
-      */}
-      <main className="bg-white text-gray-800 pt-28 pb-16 md:pt-36 md:pb-24">
+      {/* Spaziatura definita in globals.css: vedi la nota su .legal-page-padding. */}
+      <main className="legal-page-padding bg-white text-gray-800">
         <div className="container-custom">
           <div className="mx-auto max-w-4xl">
             <LegalPageHeader
