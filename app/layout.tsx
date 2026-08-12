@@ -19,12 +19,12 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.clarafalomo.it"),
-  title: "Avv. Clara Falomo | Giurista internazionale d'impresa",
+  title: "Avv. Clara Falomo | Consulenza legale professionale in materia civile",
   description:
-    "Avvocato Clara Falomo, esperta in diritto societario, bancario e composizione negoziata della crisi d'impresa. Consulenza legale professionale e collaborazioni interstudio.",
+    "Avvocato Clara Falomo. Consulenza legale professionale in materia civile e collaborazioni interstudio.",
   openGraph: {
-    title: "Avv. Clara Falomo | Giurista internazionale d'impresa",
-    description: "Esperta in diritto societario, bancario e composizione negoziata della crisi d'impresa",
+    title: "Avv. Clara Falomo | Consulenza legale professionale in materia civile",
+    description: "Consulenza legale professionale in materia civile",
     type: "website",
     locale: "it_IT",
     images: [
@@ -65,7 +65,7 @@ export default function RootLayout({
               name: "Clara Falomo",
               image: "https://www.clarafalomo.it/images/hero-clara.jpg",
               description:
-                "Avvocato specializzato in diritto societario, bancario e composizione negoziata della crisi d'impresa",
+                "Consulenza legale professionale in materia civile",
               url: "https://www.clarafalomo.it",
               telephone: "+39 349 805 7326",
               email: "avvocato@clarafalomo.it",
